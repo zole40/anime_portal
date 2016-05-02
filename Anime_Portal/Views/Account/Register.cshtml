@@ -1,0 +1,67 @@
+﻿@model Anime_Portal.Models.RegisterViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div class="form-box" id="login-box">
+    <div class="header">Register New Membership</div>
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-basic", role = "form", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="body bg-gray">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder = "Username" })
+                    @Html.ValidationMessageFor(m => m.UserName)
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    @Html.TextBoxFor(m => m.DisplayName, new { @class = "form-control", @placeholder = "Full name" })
+                    @Html.ValidationMessageFor(m => m.DisplayName)
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email" })
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Retype password" })
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                </div>
+            </div>
+                @Html.TextBoxFor(m => m.Picture, new { type = "file", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Picture, "", new { @class = "text-danger" })
+        </div>
+        <div class="footer">
+
+            <button type="submit" class="btn bg-olive btn-block" value="Register">Sign me up</button>
+            @Html.ActionLink("I already have a membership", "Login")
+        </div>
+    }
+
+    @*<div class="margin text-center">
+        <span>Register using social networks</span>
+        <br>
+        <button class="btn bg-light-blue btn-circle"><i class="fa fa-facebook"></i></button>
+        <button class="btn bg-red btn-circle"><i class="fa fa-google-plus"></i></button>
+
+    </div>*@
+</div>

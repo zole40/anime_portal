@@ -1,0 +1,194 @@
+﻿@model Bll.DTO.MailHeaderData
+<link href="~/Content/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
+<!-- iCheck for checkboxes and radio inputs -->
+<link href="~/Content/iCheck/minimal/blue.css" rel="stylesheet" type="text/css" />
+<div class="mailbox row">
+    <div class="col-xs-12">
+        <div class="box box-solid">
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <!-- BOXES are complex enough to move the .box-header around.
+                             This is an example of having the box header within the box body -->
+                        <div class="box-header">
+                            <i class="fa fa-inbox"></i>
+                            <h3 class="box-title">INBOX</h3>
+                        </div>
+                        <!-- compose message btn -->
+                        <a class="btn btn-block btn-primary" data-toggle="modal" data-target="#compose-modal" id="createMail"><i class="fa fa-pencil"></i> Compose Message</a>
+                        <!-- Navigation - folders-->
+                        <div style="margin-top: 15px;">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li class="active" id="inbox"><a href="#"><i class="fa fa-inbox"></i> Inbox</a></li>
+                                <li class="" id="sent"><a href="#"><i class="fa fa-mail-forward"></i> Sent</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col (LEFT) -->
+                    <div class="col-md-9 col-sm-8">
+
+                        <div class="table-responsive">
+                            <!-- THE MESSAGES -->
+                            <table id="example1" class="table table-mailbox" aria-describedby="example1_info">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 277px;">Name</th>
+                                        <th class="sorting" role="columnheader" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 248px;">Subject</th>
+                                        <th rowspan="1" colspan="1" style="width:30px">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="mailbox">
+                                    @Html.Action("Inbox", "Mail", new { userName = User.Identity.Name })
+                                </tbody>
+                            </table>
+                        </div><!-- /.table-responsive -->
+                    </div><!-- /.col (RIGHT) -->
+                </div><!-- /.row -->
+            </div><!-- /.box-body -->
+
+        </div><!-- box-footer -->
+    </div><!-- /.box -->
+</div><!-- /.col (MAIN) -->
+
+<!-- Page script -->
+<script type="text/javascript">
+    var type = "inbox";
+
+    $('#example1 tr').click(function (event) {
+        id = $(this).attr('id');
+        $.ajax({
+            url: "@Url.Action("getMail", "Mail")",
+            data: { mailId: id, type : type },
+            dataType: "html",
+            type: "GET",
+            cache: false,
+        }).done(function (data, textStatus, jqXHR) {
+            $("#view").html(data);
+        });
+
+    });
+
+
+
+    $("#createMail").click(function () {
+        $.ajax({
+            url: "@Url.Action("Send", "Mail")",
+            dataType: "html",
+            type: "GET",
+            cache: false,
+        }).done(function (data, textStatus, jqXHR) {
+            $("#mail").html(data);
+        });
+    });
+
+
+
+    $("#inbox").click(function () {
+        var name = $('<textarea/>').html("@User.Identity.Name").text();
+        $.ajax({
+            url: "@Url.Action("Inbox", "Mail")",
+            data: { userName: name },
+            dataType: "html",
+            type: "GET",
+            cache: false,
+        }).done(function (data, textStatus, jqXHR) {
+            $("#mailbox").html(data);
+            $("#sent").removeClass("active");
+            $("#inbox").addClass("active");
+            type = "inbox";
+        }).done(function () {
+
+            $('#example1 tr').click(function (event) {
+                id = $(this).attr('id');
+                $.ajax({
+                    url: "@Url.Action("getMail", "Mail")",
+                    data: { mailId: id, type : type },
+                dataType: "html",
+                type: "GET",
+                cache: false,
+                }).done(function (data, textStatus, jqXHR) {
+                    $("#view").html(data);
+                });
+
+        });
+        });
+    });
+
+    $("#sent").click(function () {
+        var name = $('<textarea/>').html("@User.Identity.Name").text();
+        $.ajax({
+            url: "@Url.Action("GetsendedMail", "Mail")",
+            data: { userName: name },
+            dataType: "html",
+            type: "GET",
+            cache: false,
+        }).done(function (data, textStatus, jqXHR) {
+            $("#mailbox").html(data);
+            $("#sent").addClass("active");
+            $("#inbox").removeClass("active");
+            type = "sent";
+        }).done(function () {
+            $('#example1 tr').click(function (event) {
+                id = $(this).attr('id');
+                $.ajax({
+                    url: "@Url.Action("getMail", "Mail")",
+                    data: { mailId: id, type : type },
+                dataType: "html",
+                type: "GET",
+                cache: false,
+                }).done(function (data, textStatus, jqXHR) {
+                    $("#view").html(data);
+                });
+
+        });
+
+        });
+    });
+
+
+    $(function () {
+        $("#example1").dataTable();
+    });
+
+    $(function () {
+
+        "use strict";
+
+        //iCheck for checkbox and radio inputs
+        $('input[type="checkbox"]').iCheck({
+            checkboxClass: 'icheckbox_minimal-blue',
+            radioClass: 'iradio_minimal-blue'
+        });
+
+        //When unchecking the checkbox
+        $("#check-all").on('ifUnchecked', function (event) {
+            //Uncheck all checkboxes
+            $("input[type='checkbox']", ".table-mailbox").iCheck("uncheck");
+        });
+        //When checking the checkbox
+        $("#check-all").on('ifChecked', function (event) {
+            //Check all checkboxes
+            $("input[type='checkbox']", ".table-mailbox").iCheck("check");
+        });
+        //Handle starring for glyphicon and font awesome
+        $(".fa-star, .fa-star-o, .glyphicon-star, .glyphicon-star-empty").click(function (e) {
+            e.preventDefault();
+            //detect type
+            var glyph = $(this).hasClass("glyphicon");
+            var fa = $(this).hasClass("fa");
+
+            //Switch states
+            if (glyph) {
+                $(this).toggleClass("glyphicon-star");
+                $(this).toggleClass("glyphicon-star-empty");
+            }
+
+            if (fa) {
+                $(this).toggleClass("fa-star");
+                $(this).toggleClass("fa-star-o");
+            }
+        });
+
+        //Initialize WYSIHTML5 - text editor
+        $("#email_message").wysihtml5();
+    });
+</script>

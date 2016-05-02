@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3eecac3e0a3d43a2a2a7a24320063057" Name="Diagram1">
+        <EntityTypeShape EntityType="AnimePortalModel.Animes" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnimePortalModel.Category" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnimePortalModel.Comment" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnimePortalModel.Editors" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnimePortalModel.Favorite" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnimePortalModel.Message" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnimePortalModel.Rating" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnimePortalModel.Session" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="AnimePortalModel.Video" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="AnimePortalModel.FK_Favorite_Animes" ManuallyRouted="false" />
+        <AssociationConnector Association="AnimePortalModel.FK_Rating_Animes" ManuallyRouted="false" />
+        <AssociationConnector Association="AnimePortalModel.FK_Session_Animes" ManuallyRouted="false" />
+        <AssociationConnector Association="AnimePortalModel.FK_Video_Animes" ManuallyRouted="false" />
+        <AssociationConnector Association="AnimePortalModel.FK_Video_Session" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

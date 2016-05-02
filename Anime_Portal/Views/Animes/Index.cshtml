@@ -1,0 +1,32 @@
+﻿@model List<Bll.DTO.AnimeModel.AnimeHeaderIndex>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+      
+@foreach (var anime in Model)
+{
+    <a href="@Url.Action("Details", "Animes" , new { friendlyUrl = anime.FriendlyUrl },null)">
+        <div class="col-lg-3">
+            <div class="tarolo">
+                <div class="sor pul">
+                    <span class="pull-left"> @anime.Name </span>
+                    @for (int i = 5; i > 0; i--)
+                    {
+                        if (i <= anime.Rating)
+                        {
+                            <i class="glyphicon glyphicon-star pull-right"></i>
+                        }
+                        else
+                        {
+                            <i class="glyphicon glyphicon-star-empty pull-right"></i>
+                        }
+                    }<br /><span class="genre">@anime.Category</span>
+                </div>
+                <div class="kep"><img src="~/Upload/AnimePicture/@anime.PictureUrl" style="width:100%" /></div>
+            </div>
+        </div>
+    </a>
+}
+

@@ -1,0 +1,247 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body class="skin-black  pace-done fixed  wysihtml5-supported">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99" style="width:100%">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+    <header class="header">
+        <a href="@Url.Action("Index","Animes")" class="logo">
+            <!-- Add the class icon to your logo image or logo icon to add the margining -->
+            AnimePortal
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            @Html.Partial("_LoginPartial")
+        </nav>
+    </header>
+
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="left-side sidebar-offcanvas">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+
+                <!-- Sidebar user panel -->
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="user-panel">
+                        <!-- Image-->
+                        <div class="pull-left image">
+                            <img src="~/Upload/ProfilePictures/@Session["AvatarUrl"]" class="img-circle" alt="User Image">
+                        </div>
+                        <!-- Name and status-->
+                        <div class="pull-left info">
+                            <p>@Session["DisplayName"]</p>
+
+                            <a href="#" id="status"></a>
+                        </div>
+                    </div>
+                }
+                <!-- search form -->
+                @using (Html.BeginForm("Search", "Animes", FormMethod.Get, new { @class = "sidebar-form", role = "form" }))
+                {
+                    <div class="input-group">
+                        <input type="text" name="search" class="form-control" placeholder="Search...">
+                        <span class="input-group-btn">
+                            <button type="submit" name="button" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                }
+                <!-- /.search form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <!--Home -->
+                    <li class="active">
+                        <a href="@Url.Action("Index", "Animes")">
+                            <i class="fa fa-home"></i> <span>Home</span>
+                        </a>
+                    </li>
+                    @if (User.IsInRole("Administrators"))
+                    {
+                        <li>
+                            <a href="@Url.Action("Index", "Manage")">
+                                <i class="fa fa-users"></i> <span>Users</span>
+                            </a>
+                        </li>
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>
+                            <a href="@Url.Action("Mailbox", "Mail" ,new { userName = User.Identity.Name})">
+                                <i class="fa fa-envelope"></i> <span>Mailbox</span>
+                            </a>
+                        </li>
+                        <!--Favorite and Animes-->
+                        <li>
+                            <a href="@Url.Action("Favorite", "Animes")">
+                                <i class="fa fa-heart"></i> <span>Favorite</span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-tasks"></i>
+                                <span>Animes</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="@Url.Action("Created", "Animes")" style="margin-left: 10px;"><i class="fa fa-upload"></i>Created</a></li>
+                                <li><a href="@Url.Action("Editor", "Animes")" style="margin-left: 10px;"><i class="fa fa-edit"></i>Editor</a></li>
+                                <li><a href="@Url.Action("Management", "Animes")" style="margin-left: 10px;"><i class="fa fa-edit"></i>Management</a></li>
+
+                            </ul>
+                        </li>
+                    }
+                    <!-- Genre-->
+                    <li class="treeview">
+
+                        <a href="#">
+                            <i class="fa fa-desktop"></i>
+                            <span>Categories</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu" id="category"></ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- /.sidebar -->
+        </aside>
+        <aside class="right-side">
+            <section class="content">
+                @RenderBody()
+            </section>
+
+        </aside>
+    </div>
+
+    @using (Ajax.BeginForm("Send", "Mail", new { From = User.Identity.Name }, new AjaxOptions { HttpMethod = "POST", OnSuccess = "dismiss()" }, null))
+    {
+        <div class="modal fade" id="compose-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"><i class="fa fa-envelope-o"></i>New Message</h4>
+                    </div>
+                    <div id="mail"></div>
+
+                    <div class="modal-footer clearfix">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Discard</button>
+                        <button type="submit" class="btn btn-primary pull-left"><i class="fa fa-envelope"></i> Send Message</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    }
+
+
+    <div class="modal fade" id="inbox-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><i class="fa fa-envelope-o"></i> Message</h4>
+                </div>
+                <div id="view"></div>
+
+                <div class="modal-footer clearfix">
+                    <button type="button" class="btn btn-primary pull-left" id="reply" data-dismiss="modal" data-toggle="modal" data-target="#compose-modal"><i class="fa fa-envelope"></i> Reply</button>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+    <script src="~/Scripts/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/iCheck/icheck.min.js" type="text/javascript"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.min.js")
+
+
+
+    <script>
+
+
+
+        setInterval(function () {
+            connectionStatus = navigator.onLine ? 'online' : 'offline';
+            if (connectionStatus == "offline") {
+                $("#status").html('<i class="fa fa-circle text-red"></i> Offline</a>');
+            }
+            else {
+                setTimeout(function () {
+                    $.ajax({
+                        url: "@Url.Action("Index", "Home")",
+                        type: "GET",
+                        success: function () {
+                            $("#status").html('<i class="fa fa-circle text-success"></i> Online</a>');
+                        },
+                        error: function () {
+                            $("#status").html('<i class="fa fa-circle text-red"></i> Offline</a>');
+                        },
+                        timeout: 2000
+                    });
+                });
+
+            }
+        }, 3000);
+
+
+        $("#reply").click(function () {
+            $.ajax({
+                url: "@Url.Action("Send", "Mail")",
+                data: {mailId :id, type : type},
+            dataType: "html",
+            type: "GET",
+            cache: false,
+            }).done(function (data, textStatus, jqXHR) {
+                $("#mail").html(data);
+            });
+        });
+
+        function dismiss() {
+            $("#compose-modal").modal("hide");
+        }
+        $(function () {
+            $.ajax({
+                url: "@Url.Action("ListCategory", "Animes")",
+                type: "GET",
+                success: function (data) {
+                    $("#category").html(data);
+                }
+            });
+        });
+
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+
+
+
+</html>

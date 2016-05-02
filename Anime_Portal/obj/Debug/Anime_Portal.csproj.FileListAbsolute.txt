@@ -1,0 +1,249 @@
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\roslyn\csc.exe
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\roslyn\vbc.exe
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\roslyn\VBCSCompiler.exe
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Anime_Portal.dll.config
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Anime_Portal.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Anime_Portal.pdb
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Antlr3.Runtime.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Bll.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\EntityFramework.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\EntityFramework.SqlServer.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Newtonsoft.Json.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Owin.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Net.Http.Formatting.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Helpers.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Http.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Http.WebHost.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Mvc.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Optimization.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Razor.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.WebPages.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.WebPages.Razor.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\WebGrease.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Bll.pdb
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Helpers.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Mvc.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Optimization.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Razor.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.WebPages.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.WebPages.Razor.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Antlr3.Runtime.pdb
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Newtonsoft.Json.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Net.Http.Formatting.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Http.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Http.WebHost.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\EntityFramework.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\EntityFramework.SqlServer.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.csprojResolveAssemblyReference.cache
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.InitialCreate.resources
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.CustomUserData.resources
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.User.resources
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.RegisterDate.resources
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.commenttype.resources
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.csproj.GenerateResource.Cache
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.pdb
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\roslyn\csc.exe
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\roslyn\System.Collections.Immutable.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\roslyn\System.Reflection.Metadata.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\roslyn\vbc.exe
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\roslyn\VBCSCompiler.exe
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\roslyn\VBCSCompiler.exe.config
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Anime_Portal.dll.config
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Anime_Portal.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Anime_Portal.pdb
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Antlr3.Runtime.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Bll.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\EntityFramework.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\EntityFramework.SqlServer.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.AspNet.Identity.Core.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Cookies.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Facebook.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Google.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.OAuth.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Twitter.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Web.Infrastructure.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Newtonsoft.Json.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Owin.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Net.Http.Formatting.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Helpers.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Http.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Http.WebHost.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Mvc.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Optimization.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Razor.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.WebPages.Deployment.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.WebPages.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.WebPages.Razor.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\WebGrease.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Bll.pdb
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Helpers.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Mvc.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Optimization.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Razor.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.WebPages.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.WebPages.Deployment.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.WebPages.Razor.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Antlr3.Runtime.pdb
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Newtonsoft.Json.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Net.Http.Formatting.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Http.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\System.Web.Http.WebHost.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\EntityFramework.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\EntityFramework.SqlServer.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.AspNet.Identity.Core.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Facebook.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Cookies.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.OAuth.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Google.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.Twitter.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.csprojResolveAssemblyReference.cache
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.InitialCreate.resources
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.CustomUserData.resources
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.User.resources
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.RegisterDate.resources
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.commenttype.resources
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.csproj.GenerateResource.Cache
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Anime_Portal\obj\Debug\Anime_Portal.pdb
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\roslyn\csc.exe
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\roslyn\System.Collections.Immutable.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\roslyn\System.Reflection.Metadata.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\roslyn\vbc.exe
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\roslyn\VBCSCompiler.exe
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\roslyn\VBCSCompiler.exe.config
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Anime_Portal.dll.config
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Anime_Portal.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Anime_Portal.pdb
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Antlr3.Runtime.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Bll.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\EntityFramework.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\EntityFramework.SqlServer.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.AspNet.Identity.Core.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Security.Cookies.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Security.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Security.Facebook.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Security.Google.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Security.OAuth.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Security.Twitter.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Web.Infrastructure.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Newtonsoft.Json.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Owin.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Net.Http.Formatting.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.Helpers.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.Http.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.Http.WebHost.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.Mvc.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.Optimization.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.Razor.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.WebPages.Deployment.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.WebPages.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.WebPages.Razor.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\WebGrease.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Bll.pdb
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.Helpers.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.Mvc.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.Optimization.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.Razor.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.WebPages.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.WebPages.Deployment.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.WebPages.Razor.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Antlr3.Runtime.pdb
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Newtonsoft.Json.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Net.Http.Formatting.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.Http.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\System.Web.Http.WebHost.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\EntityFramework.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\EntityFramework.SqlServer.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.AspNet.Identity.Core.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Security.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Security.Facebook.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Security.Cookies.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Security.OAuth.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Security.Google.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Security.Twitter.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\vs2015_projekt\anime_portal\Anime_Portal\obj\Debug\Anime_Portal.csprojResolveAssemblyReference.cache
+E:\vs2015_projekt\anime_portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.InitialCreate.resources
+E:\vs2015_projekt\anime_portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.CustomUserData.resources
+E:\vs2015_projekt\anime_portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.User.resources
+E:\vs2015_projekt\anime_portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.RegisterDate.resources
+E:\vs2015_projekt\anime_portal\Anime_Portal\obj\Debug\Anime_Portal.Migrations.commenttype.resources
+E:\vs2015_projekt\anime_portal\Anime_Portal\obj\Debug\Anime_Portal.csproj.GenerateResource.Cache
+E:\vs2015_projekt\anime_portal\Anime_Portal\obj\Debug\Anime_Portal.dll
+E:\vs2015_projekt\anime_portal\Anime_Portal\obj\Debug\Anime_Portal.pdb

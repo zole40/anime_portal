@@ -1,0 +1,85 @@
+﻿@model Bll.DTO.VideoModel.VideoDataHeader
+
+
+<script type="text/javascript">
+    function onLoad() {
+        var sec = parseInt(document.location.search.substr(1));
+
+        if (!isNaN(sec))
+            mainPlayer.currentTime = sec;
+    }
+</script>
+
+
+    <script src="~/Scripts/AnimePortal.js" type="text/javascript"></script>
+
+
+
+<div class="row">
+
+    <div class="col-lg-8" style="margin-left:3%;margin-right:2%">
+        <div class="col-lg-12" style="padding:0px">
+            <video id="mainPlayer" style="width:inherit;height:auto"
+                   autoplay="autoplay" controls="controls" onloadeddata="onLoad()">
+                <source src="@Url.RouteUrl("DefaultApi", new {httproute= "", controller = "Media" , action = "Play" , f = Model.VideoUrl})" />
+            </video>
+        </div>
+        <div class="col-lg-12" style="background-color:white;margin-top:2%;padding:1%">
+            <div class="col-lg-11"><h4>Episode @Model.Number , @Model.Name</h4></div>
+            <div class="col-lg-1">
+                @if (Model.Editor || User.IsInRole("Administrators"))
+                {
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="fa fa-caret-down"></span></button>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Edit", "Edit", new { videoIid = Model.Id }, null)</li>
+                            <li><a href="#">@Ajax.ActionLink("Delete", "Delete", new { videoId = Model.Id }, new AjaxOptions { HttpMethod = "POST", Confirm = "Biztosan törli?" })</a></li>
+                        </ul>
+                    </div>
+                }
+            </div>
+            <div class="col-lg-2">
+                <img src="~/Upload/AnimePicture/@Model.AnimePictureUrl" style="width:100px;margin:2%" />
+            </div>
+            <div class="col-lg-10">
+                Anime : @Html.ActionLink(Model.Anime, "Details", "Animes", new { friendlyUrl = Model.AnimeFriendlyUrl }, null)
+                <br />
+                Session : @Model.Session
+                <br />
+                Uploader : @Html.ActionLink(Model.Uploader, "Details", "Manage", new { Name = Model.Uploader }, null)
+                <br />
+                Upload: @Model.Upload.Year.@Model.Upload.Month.@Model.Upload.Day
+            </div>
+        </div>
+        @Html.Action("Create" ,"Comment", new {commentId = Model.Id })
+        <div class="col-lg-12" style="background-color:white;padding:0px" id="comments"></div>
+        </div>
+        <div class="col-lg-3" style="background-color:white" id="other" hidden></div>
+
+    </div>
+    <script>
+        $("#other").ready(function () {
+            var sessionId = "@Model.SessionId";
+            var videoId = "@Model.Id"
+            $.ajax({
+                url: "@Url.Action("Similar", "Videos")",
+                data: { id: sessionId, videoId: videoId },
+                dataType: "html",
+                type: "GET",
+                cache: false,
+            }).done(function (data, textStatus, jqXHR) {
+                $("#other").html(data);
+                if (data && data != "") {
+                    $("#other").show();
+                }
+            });
+        });
+    </script>
+   <script>
+
+        $(document).ready(function () {
+            var commentId = "@Model.Id";
+      
+            AnimePortal.GetComments("@Url.Action("ListComments", "Comment")", commentId, 1);
+        });
+    </script>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Bll.DTO.VideoModel.VideoHeader>
+
+
+@foreach (var video in Model)
+{
+ 
+        <div class="col-lg-3">
+            <a href="@Url.Action("Details","Videos",new {videoId = video.Id })">
+                <div class="tarolo">
+                    <div class="sor2">
+
+                        Episode @video.Number
+                        @if (video.Name != null)
+                        {
+                            <br />
+                            <span class="genre">@video.Name</span>
+                        }
+
+                    </div>
+                    <div class="kep"><img src="~/Upload/AnimePicture/@video.PictureUrl" style="width:100%" /></div>
+                </div>
+            </a>
+        </div>
+
+}
+

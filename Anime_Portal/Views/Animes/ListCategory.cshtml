@@ -1,0 +1,11 @@
+﻿@model List<Bll.DTO.CategoryHeaderData>
+
+
+
+@foreach (var item in Model)
+{
+    <li>
+    <a href="@Url.Action("ListByCategory", "Animes", new { categoryId = item.Id })" style="margin-left: 10px;">
+    <i class="fa fa-toggle-right"></i>@Html.DisplayFor(modelItem => item.CategoryName)</a></li>
+}
+

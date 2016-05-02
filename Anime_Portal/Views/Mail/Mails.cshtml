@@ -1,0 +1,20 @@
+﻿@model LinkedList<Bll.DTO.MailHeaderData>
+
+@foreach (var item in Model)
+{
+
+
+    <li data-toggle="modal" data-target="#inbox-modal"   id="@item.Id">
+        <!-- start message -->
+        <a href="#">
+            <div class="pull-left">
+                <img src="~/Upload/ProfilePictures/@item.avatar" class="img-circle" alt="User Image">
+            </div>
+            <h4>
+                @item.From
+                <small><i class="fa fa-clock-o"></i> @item.date.Minute min</small>
+            </h4>
+            <p>@item.Title</p>
+        </a>
+    </li>
+}

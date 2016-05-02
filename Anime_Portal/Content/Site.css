@@ -1,0 +1,70 @@
+﻿.sor{
+position : absolute;
+height : 22px;
+background-color: black;
+z-index: 3;
+width: 84.2%;
+text-align:center;
+}
+
+.sor2{
+position : absolute;
+height : 22px;
+background-color: black;
+z-index: 3;
+width: 83%;
+text-align:center;
+}
+
+.sor3{
+position : absolute;
+height : 22px;
+background-color: black;
+z-index: 3;
+width: 91%;
+text-align:center;
+}
+
+.genre{
+    display:none;
+    text-align:center;
+}
+
+.tarolo{
+    text-align:center;
+    color:white;
+    padding:3px;
+border: 3px solid black;
+width: 100%;
+border-radius: 4%;
+margin-top: 4%;
+}
+
+.kep{
+    position:relative;
+    margin-top:22px;
+}
+
+.tarolo:hover > .sor > .genre{
+    display:block;
+}
+
+.tarolo:hover > .sor {
+    height: 44px;
+}
+
+.tarolo:hover > .sor2 > .genre{
+    display:block;
+}
+
+.tarolo:hover > .sor2 {
+    height: 44px;
+}
+
+.tarolo:hover > .sor3 > .genre{
+    display:block;
+}
+
+.tarolo:hover > .sor3 {
+    height: 44px;
+}

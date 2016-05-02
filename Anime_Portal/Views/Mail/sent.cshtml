@@ -1,0 +1,10 @@
+﻿@model Bll.DTO.MailHeaderData
+<div class="modal-body">
+    <div class="form-group">
+        <h4>Sent</h4>
+        <label>To: @Model.To</label><br />
+        <label>Subject: @Model.Title</label>
+    </div>
+    <div class="col-lg-12">@Html.Raw(Model.Text)</div>
+
+</div>

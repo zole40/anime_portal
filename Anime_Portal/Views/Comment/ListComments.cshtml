@@ -1,0 +1,18 @@
+﻿@model List<Bll.DTO.CommentModel.CommentData>
+@foreach (var item in Model)
+{
+    <div class="col-lg-12">
+        <div class="col-lg-2" style="padding:0px">
+            <img src="~/Upload/ProfilePictures/@item.UserPictureUrl" class="img-thumbnail" />
+        </div>
+        <div class="col-lg-10" style="padding:0px">
+            <div class="col-lg-12">@Html.ActionLink( item.UserName,"Details","Manage", new { Name = item.UserName },null)</div>
+            <div class="col-lg-12">
+                <div class="pull-left">
+                    @Html.Raw(item.Text)
+                </div>
+            </div>
+            <div class="col-lg-12"><span class="pull-right">@item.Date.Year.@item.Date.Month.@item.Date.Day</span></div>
+            </div>
+    </div>
+}

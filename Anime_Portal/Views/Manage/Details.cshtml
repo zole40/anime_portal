@@ -1,0 +1,148 @@
+﻿@model Anime_Portal.Models.DetailsProfileModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<!-- page start-->
+<div class="col-lg-12 panel">
+    <div class="col-lg-2">
+        <img src="~/Upload/ProfilePictures/@Model.PictureUrl" class="img-circle" alt="User Image">
+    </div>
+    <div class="col-lg-2" style="margin-top:35px">
+        <i class="fa fa-user-md"></i> @Model.UserName <br />
+        <i class="fa fa-user"></i> @Model.DisplayName <br />
+        <i class="fa fa-envelope"></i> @Model.Email <br />
+        <i class="fa fa-calendar"></i> @Model.RegisterDate.Year.@Model.RegisterDate.Month.@Model.RegisterDate.Day <br />
+        @if (User.Identity.IsAuthenticated)
+        {
+        <i class="fa fa-envelope"></i><a href="#" data-toggle="modal" data-target="#myModal" id="quick">Send Message</a>
+        }
+    </div>
+
+
+    <div class="col-lg-8" id="top">
+    </div>
+    <div class="col-lg-12 panel">
+        <section class="panel">
+            <header class="panel-heading tab-bg-info">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a data-toggle="tab" href="#recent-activity" id="anime">
+                            <i class="icon-home"></i>
+                            Anime
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#profile" id="video">
+                            <i class="icon-user"></i>
+                            Videos
+                        </a>
+                    </li>
+
+                </ul>
+            </header>
+            <div class="panel-body">
+                <div class="tab-content" id="animeList">
+                    <div id="recent-activity" class="tab-pane active">
+                    </div>
+                </div>
+                <!-- profile -->
+
+
+            </div>
+        </section>
+    </div>
+</div>
+
+
+@using (Ajax.BeginForm("Send", "Mail", new { From = User.Identity.Name }, new AjaxOptions { HttpMethod = "POST",OnSuccess = "dismiss()"}, null))
+{
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" style="width:250px;text-align:center">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div id="quickmail"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+                    <script>
+
+                        function dismiss() {
+                            $("#myModal").modal("hide");
+                        }
+
+                        $("#quick").click(function () {
+                            var name = $('<textarea/>').html("@Model.UserName").text();
+                            $.ajax({
+                                url: "@Url.Action("quickmail", "Mail")",
+                                data: { adress: name },
+                            dataType: "html",
+                            type: "GET",
+                            cache: false,
+                            }).done(function (data, textStatus, jqXHR) {
+                                $("#quickmail").html(data);
+                            });
+                        });
+
+                        $("#video").click(function () {
+                            var name = $('<textarea/>').html("@Model.UserName").text();
+                            $.ajax({
+                                url: "@Url.Action("ListByUser", "Videos")",
+                                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                                data: { userName: name },
+                                dataType: "html",
+                                type: "GET",
+                                cache: false,
+                            }).done(function (data, textStatus, jqXHR) {
+                                $("#animeList").html(data);
+                            });
+                        });
+
+                        $("#anime").on("click", function () {
+                            var name = $('<textarea/>').html("@Model.UserName").text();
+                            $.ajax({
+                                url: "@Url.Action("ListByUser", "Animes")",
+                                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                                data: { Name: name },
+                                dataType: "html",
+                                type: "GET",
+                                cache: false,
+                            }).done(function (data, textStatus, jqXHR) {
+                                $("#animeList").html(data);
+                            });
+                        });
+
+
+                        $(function () {
+                            var name = $('<textarea/>').html("@Model.UserName").text();
+                            $.ajax({
+                                url: "@Url.Action("FavoritePartial", "Animes")",
+                                data: { Name: name },
+                                dataType: "html",
+                                type: "GET",
+                                cache: false,
+                            }).done(function (data, textStatus, jqXHR) {
+                                $("#top").html(data);
+                            });
+
+                            $.ajax({
+                                url: "@Url.Action("ListByUser", "Animes")",
+                                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                                data: { Name: name },
+                                dataType: "html",
+                                type: "GET",
+                                cache: false,
+                            }).done(function (data, textStatus, jqXHR) {
+                                $("#animeList").html(data);
+                            });
+                        });
+                    </script>
+
+

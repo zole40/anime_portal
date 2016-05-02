@@ -1,0 +1,30 @@
+﻿@model List<Bll.DTO.SessionHeaderData>
+
+
+@foreach (var item in Model)
+{
+
+    <li class="">
+        <a data-toggle="tab" href="#session" class="number" id="@item.SessionID">
+
+            <i class="icon-home"></i>
+          Session : @item.Number
+        </a>
+    </li>
+}
+
+<script>
+    $('.number').on('click', function (e) {
+        var item = e.target.id;
+        $.ajax({
+            url: "@Url.Action("ListVideos", "Videos")",
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+            data: { id : item },
+            dataType: "html",
+            type: "GET",
+            cache: false,
+        }).done(function (data, textStatus, jqXHR) {
+            $("#videos").html(data);
+        });
+    });
+</script>

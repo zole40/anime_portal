@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Anime_Portal.Models.IndexViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<table id="example1" class="table table-bordered table-striped dataTable" aria-describedby="example1_info">
+    <thead>
+        <tr role="row">
+            <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 189px;">@Html.DisplayNameFor(model => model.DisplayName)</th>
+            <th class="sorting" role="columnheader" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 277px;">@Html.DisplayNameFor(model => model.UserName)</th>
+            <th class="sorting" role="columnheader" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 248px;">@Html.DisplayNameFor(model => model.Email)</th>
+            <th rowspan="1" colspan="1" style="width:30px">Action</th>        
+         </tr>
+    </thead>
+
+    <tfoot>
+        <tr>
+            <th rowspan="1" colspan="1">@Html.DisplayNameFor(model => model.DisplayName)</th>
+            <th rowspan="1" colspan="1">@Html.DisplayNameFor(model => model.UserName)</th>
+            <th rowspan="1" colspan="1">@Html.DisplayNameFor(model => model.Email)</th>
+            <th rowspan="1" colspan="1" style="width:30px">Action</th>
+        </tr>
+    </tfoot>
+    <tbody role="alert" aria-live="polite" aria-relevant="all">
+        @foreach (var item in Model)
+            {
+            <tr class="odd">
+                <td class=" sorting_1">@item.DisplayName</td>
+                <td class=" ">@item.UserName</td>
+                <td class=" ">@item.Email</td>
+                <td style="width:30px">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="fa fa-caret-down"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">@Html.ActionLink("Profil","Details", new { Name = item.UserName })</a></li>
+                            <li><a href="#">@Html.ActionLink("Edit", "Edit", new {  Name = item.UserName })</a></li>
+                            <li><a href="#">@Ajax.ActionLink("Delete","Delete",new { UserName = item.UserName },new AjaxOptions { HttpMethod = "POST", Confirm = "Biztosan törli?", OnSuccess = "window.location.reload(true)" })</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
+
+<script>
+
+
+    $(function () {
+        $("#example1").dataTable();
+        $('#example2').dataTable({
+            "bPaginate": true,
+            "bLengthChange": false,
+            "bFilter": false,
+            "bSort": true,
+            "bInfo": true,
+            "bAutoWidth": false
+        });
+    });
+
+</script>

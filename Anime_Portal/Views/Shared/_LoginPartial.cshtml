@@ -1,0 +1,139 @@
+﻿
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="navbar-right">
+            <ul class="nav navbar-nav">
+                <!-- Messages: style can be found in dropdown.less-->
+                <li class="dropdown messages-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="checkmails">
+                        <i class="fa fa-envelope"></i>
+                        <span class="label label-success" id="mails"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header" id="mailsnumber"></li>
+                        <li>
+                            <ul class="menu" id="check">
+
+                            </ul>
+                            <!-- inner menu: contains the actual data -->
+                 
+                        </li>
+                        <li class="footer"><a href="#">@Html.ActionLink("See All Messages","Mailbox","Mail",null,null)</a></li>
+                    </ul>
+                </li>
+                <!-- Notifications: style can be found in dropdown.less -->
+              
+                <!-- User Account: style can be found in dropdown.less -->
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <span>@Session["DisplayName"]<i class="caret"></i></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- User image -->
+                        <li class="user-header bg-light-blue">
+                            <img src="~/Upload/ProfilePictures/@Session["PictureUrl"]" class="img-circle" alt="User Image">
+                            <p>
+                                @Session["DisplayName"]
+                                <small>Member since @Session["Date"]</small>
+                            </p>
+                        </li>
+                        <!-- Menu Body -->
+                        <li class="user-body">
+                            <div class="col-xs-4 text-center">
+                                <a href="@Url.Action("Create","Animes")">Create</a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="#"></a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="@Url.Action("Edit","Manage")">Edit</a>
+                            </div>
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="@Url.Action("Details","Manage")" class="btn btn-default btn-flat">Profile</a>
+                            </div>
+                            <div class="pull-right">
+                        <a href="javascript:document.getElementById('logoutForm').submit()" class="btn btn-default btn-flat">Log Out</a>
+</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    }
+
+
+    <script>
+        var id;
+        setInterval(function () {
+             var name = $('<textarea/>').html("@User.Identity.Name").text();
+            $.ajax({
+                url: "@Url.Action("newMails", "Mail")",
+                data: {userName : name},
+                type: "GET",
+                cache : false,
+            success: function (data) {
+                $("#mails").html(data);
+                $("#mailsnumber").html("You have " + data + " messages");
+            }
+            });
+        }, 4000);
+
+        $("#reply").click(function () {
+            $.ajax({
+                url: "@Url.Action("Send", "Mail")",
+                data: {mailId :id},
+            dataType: "html",
+            type: "GET",
+            cache: false,
+            }).done(function (data, textStatus, jqXHR) {
+                $("#mail").html(data);
+            });
+        });
+
+        $("#checkmails").click(function () {
+             var name = $('<textarea/>').html("@User.Identity.Name").text();
+            $.ajax({
+                url: "@Url.Action("Mails", "Mail")",
+                data: {userName : name},
+                type: "GET",
+                cache: false,
+            success: function (data) {
+                $("#check").html(data);
+            }
+            }).done(function () {
+                $('#check li').click(function (event) {
+                    id = $(this).attr('id');
+                    $.ajax({
+                        url: "@Url.Action("getMail", "Mail")",
+                        data: { mailId: id },
+                    dataType: "html",
+                    type: "GET",
+                    cache: false,
+                    }).done(function (data, textStatus, jqXHR) {
+                        $("#view").html(data);
+                    });
+
+            });
+            });
+        });
+    </script>
+}
+else
+{
+    <div class="navbar-right">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+            <li>
+            <li>@Html.ActionLink("Login", "Login", "Account", routeValues: null, htmlAttributes: new { id = "LoginLink" })</li>
+        </ul>
+    </div>
+}

@@ -1,0 +1,314 @@
+﻿@model Bll.DTO.AnimeModel.AnimeHeaderData
+
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/iCheck/all.css" rel="stylesheet" type="text/css" />
+<!-- page start-->
+<div class="col-lg-12 panel">
+    <div class="col-lg-2">
+        <img src="~/Upload/AnimePicture/@Model.PictureUrl" class="img-thumbnail" style="width:100%" alt="User Image">
+    </div>
+    <div class="col-lg-2" style="margin-top:10px">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <input type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="@Model.Rating">
+        }
+        else
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                if (i >= Model.Rating)
+                {
+                    <i class="glyphicon glyphicon-star-empty"></i>
+                }
+                else
+                {
+                    <i class="glyphicon glyphicon-star"></i>
+                }
+            }
+        }
+
+
+        <br />
+        Name : @Model.Name <br />
+        Category : @Model.Category <br />
+        Uploader : @Html.ActionLink(Model.Uploader, "Details", "Manage", new { Name = Model.Uploader }, null)
+
+    </div>
+
+
+    <div class="col-lg-7" style="text-align:center">@Html.Raw(Model.Description) </div>
+    <div class="col-lg-1">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="fa fa-caret-down"></span></button>
+                <ul class="dropdown-menu">
+                    @if (Model.Favorite)
+                    {
+                        <li>@Html.ActionLink("Remove Favorite", "RemoveFavorite", new { friendlyUrl = Model.FriendlyUrl }, null)</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Add Favorite", "addFavorite", new { friendlyUrl = Model.FriendlyUrl }, null)</li>
+                    }
+                    @if (Model.Edit || User.IsInRole("Administrators"))
+                    {
+                        <li>@Html.ActionLink("Edit", "Edit", new { friendlyUrl = Model.FriendlyUrl }, null)</li>
+                        <li><a href="#" data-toggle="modal" data-target="#myModal">Sessions</a></li>
+                        if (Model.Sess)
+                        {
+                            <li>@Html.ActionLink("Upload Video", "Create", "Videos", new { friendlyUrl = Model.FriendlyUrl }, null)</li>
+                        }
+                        if (Model.Creator || User.IsInRole("Administrators"))
+                        {
+                            <li><a href="#">@Ajax.ActionLink("Delete", "Delete", new { friendlyUrl = Model.FriendlyUrl }, new AjaxOptions { HttpMethod = "POST", Confirm = "Biztosan törli?",InsertionMode = InsertionMode.Replace })</a></li>
+                        }
+                    }
+
+                    else if (!Model.Request)
+                    {
+                        <li>@Html.ActionLink("Editor Request", "EditorRequest", "Animes", new { friendlyUrl = Model.FriendlyUrl }, null)</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Cancel Request", "CancelRequest", "Animes", new { friendlyUrl = Model.FriendlyUrl }, null)</li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+
+</div>
+<div class="col-lg-12 panel">
+    <section class="panel">
+        <header class="panel-heading tab-bg-info">
+            <ul class="nav nav-tabs" id="session"></ul>
+        </header>
+        <div class="panel-body">
+            <div class="tab-content" id="videos">
+                <div id="recent-activity" class="tab-pane active">
+                    <div class="profile-activity">
+
+                    </div>
+                </div>
+                <!-- profile -->
+            </div>
+        </div>
+    </section>
+</div>
+@using (Html.BeginForm("Sessions", "Session", new { friendlyUrl = Model.FriendlyUrl }, FormMethod.Post, null))
+{
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" style="width:250px;text-align:center">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Session</h4>
+                    <select id="selected" name="Type">
+                        <option value="Add">Add</option>
+                        <option value="Delete">Delete</option>
+                    </select>
+
+                </div>
+                <div class="modal-body" id="body">
+                    <div id="add">
+                        Number: <input type="number" name="number" />
+                        <div class="footer">
+                            <br />
+                            <input type="submit" class="btn btn-default" name="add" value="Add" />
+                        </div>
+                    </div>
+                    <div id="delete">
+                        Number: <select ng-app="myApp" ng-controller="customersCtrl" name="number">
+                            <option ng-repeat="x in numbers">
+                                {{x.Number}}
+                            </option>
+                        </select>
+                        <div class="footer">
+                            <br />
+                            <input type="submit" class="btn btn-default" name="add" value="Delete" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}
+<script>
+    var app = angular.module('myApp', []);
+
+    app.controller('customersCtrl', function ($scope, $http) {
+        $http.get("@Url.Action("getSessionJson", "Session" , new { friendlyUrl = Model.FriendlyUrl })")
+        .then(function (response) { $scope.numbers = response.data; });
+    });
+
+    $(function () {
+        $("#delete").hide();
+    });
+    $(document).on('change', '#selected', function () {
+
+        if (this.value == "Add") {
+            $("#add").show();
+            $("#delete").hide();
+        }
+        if (this.value == "Delete") {
+            $("#add").hide();
+            $("#delete").show();
+        }
+    });;
+</script>
+
+<script>
+
+    (function ($) {
+
+        $.fn.rating = function () {
+
+            var element;
+
+            // A private function to highlight a star corresponding to a given value
+            function _paintValue(ratingInput, value) {
+                var selectedStar = $(ratingInput).find('[data-value=' + value + ']');
+                selectedStar.removeClass('glyphicon-star-empty').addClass('glyphicon-star');
+                selectedStar.prevAll('[data-value]').removeClass('glyphicon-star-empty').addClass('glyphicon-star');
+                selectedStar.nextAll('[data-value]').removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+            }
+
+            // A private function to remove the selected rating
+            function _clearValue(ratingInput) {
+                var self = $(ratingInput);
+                self.find('[data-value]').removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+                self.find('.rating-clear').hide();
+                self.find('input').val('').trigger('change');
+            }
+
+            // Iterate and transform all selected inputs
+            for (element = this.length - 1; element >= 0; element--) {
+
+                var el, i, ratingInputs,
+                  originalInput = $(this[element]),
+                      max = originalInput.data('max') || 5,
+                      min = originalInput.data('min') || 0,
+                      clearable = originalInput.data('clearable') || null,
+                      stars = '';
+
+                // HTML element construction
+                for (i = min; i <= max; i++) {
+                    // Create <max> empty stars
+                    stars += ['<span class="glyphicon glyphicon-star-empty" data-value="', i, '"></span>'].join('');
+                }
+                // Add a clear link if clearable option is set
+                if (clearable) {
+                    stars += [
+                      ' <a class="rating-clear" style="display:none;" href="javascript:void">',
+                      '<span class="glyphicon glyphicon-remove"></span> ',
+                      clearable,
+                      '</a>'].join('');
+                }
+
+                el = [
+                  // Rating widget is wrapped inside a div
+                  '<div class="rating-input">',
+                  stars,
+                  // Value will be hold in a hidden input with same name and id than original input so the form will still work
+                  '<input type="hidden" name="',
+                  originalInput.attr('name'),
+                  '" value="',
+                  originalInput.val(),
+                  '" id="',
+                  originalInput.attr('id'),
+                  '" />',
+                  '</div>'].join('');
+
+                // Replace original inputs HTML with the new one
+                originalInput.replaceWith(el);
+
+            }
+
+            // Give live to the newly generated widgets
+            $('.rating-input')
+              // Highlight stars on hovering
+              .on('mouseenter', '[data-value]', function () {
+                  var self = $(this);
+                  _paintValue(self.closest('.rating-input'), self.data('value'));
+              })
+              // View current value while mouse is out
+              .on('mouseleave', '[data-value]', function () {
+                  var self = $(this);
+                  var val = self.siblings('input').val();
+                  if (val) {
+                      _paintValue(self.closest('.rating-input'), val);
+                  }
+                  else {
+                      _clearValue(self.closest('.rating-input'));
+                  }
+              })
+              // Set the selected value to the hidden field
+              .on('click', '[data-value]', function (e) {
+                  var self = $(this);
+                  var val = self.data('value');
+                  self.siblings('input').val(val).trigger('change');
+                  self.siblings('.rating-clear').show();
+                  e.preventDefault();
+                  $.ajax({
+                      url: "@Url.Action("Rating", "Animes")",
+                      data: { rating: val, friendlyUrl: "@Model.FriendlyUrl" },
+                      dataType: "html",
+                      type: "POST",
+                  }).done(function (data, textStatus, jqXHR) {
+                      $("#test").val(data);
+                  });
+                  false
+              })
+        // Remove value on clear
+           .on('click', '.rating-clear', function (e) {
+               _clearValue($(this).closest('.rating-input'));
+               e.preventDefault();
+               false
+           })
+           // Initialize view with default value
+           .each(function () {
+               var val = $(this).find('input').val();
+               if (val) {
+                   _paintValue(this, val);
+                   $(this).find('.rating-clear').show();
+               }
+           });
+
+        };
+
+        // Auto apply conversion of number fields with class 'rating' into rating-fields
+        $(function () {
+            if ($('input.rating[type=number]').length > 0) {
+                $('input.rating[type=number]').rating();
+            }
+        });
+
+    }(jQuery));
+
+</script>
+
+<script>
+    $("#session").ready(function () {
+        var dat = "@Model.FriendlyUrl";
+        $.ajax({
+            url: "@Url.Action("getSession", "Session")",
+            data: { friendlyUrl: dat },
+            dataType: "html",
+            type: "GET",
+            cache: false,
+        }).done(function (data, textStatus, jqXHR) {
+            $("#session").html(data);
+        });
+    });
+</script>
+
+
+

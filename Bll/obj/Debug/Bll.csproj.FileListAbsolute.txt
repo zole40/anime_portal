@@ -1,0 +1,46 @@
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\Bll.dll.config
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\Bll.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\Bll.pdb
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\EntityFramework.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\System.Web.Helpers.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\System.Web.Mvc.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\System.Web.Razor.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\System.Web.WebPages.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\EntityFramework.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\System.Web.Helpers.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\System.Web.Mvc.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\System.Web.Razor.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\System.Web.WebPages.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\obj\Debug\Bll.csprojResolveAssemblyReference.cache
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\obj\Debug\Bll.dll
+C:\Users\Zoltán\Documents\Visual Studio 2015\Projects\Anime_Portal\Bll\obj\Debug\Bll.pdb
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\Bll.dll.config
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\Bll.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\Bll.pdb
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\EntityFramework.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\EntityFramework.SqlServer.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\System.Web.Helpers.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\System.Web.Mvc.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\System.Web.Razor.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\System.Web.WebPages.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\System.Web.WebPages.Razor.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\EntityFramework.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\EntityFramework.SqlServer.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\System.Web.Helpers.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\System.Web.Mvc.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\System.Web.Razor.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\System.Web.WebPages.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\bin\Debug\System.Web.WebPages.Razor.xml
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\obj\Debug\Bll.csprojResolveAssemblyReference.cache
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\obj\Debug\Bll.dll
+E:\vs2015_projekt\Projects\Anime_Portal\Bll\obj\Debug\Bll.pdb

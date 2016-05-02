@@ -1,0 +1,13 @@
+﻿@model List<Bll.DTO.MailHeaderData>
+
+@foreach (var item in Model)
+{
+
+    <tr data-toggle="modal" data-target="#inbox-modal" id="@item.Id">
+        <td class="name"><a href="#">@item.From</a></td>
+        <td class="subject"><a href="#">@item.Title</a></td>
+        <td class="time">@item.date</td>
+    </tr>
+}
+
+

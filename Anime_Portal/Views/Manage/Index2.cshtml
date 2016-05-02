@@ -1,0 +1,45 @@
+﻿@model Anime_Portal.Models.DetailsProfileModel
+@{
+    ViewBag.Title = "Manage";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div>
+    <h4>Change your account settings</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>@Html.LabelFor(model => Model.HasPassword)</dt>
+        <dd>
+            [
+            @if (Model.HasPassword)
+            {
+                @Html.ActionLink("Change your password", "ChangePassword")
+            }
+            ]
+        </dd>
+        <dt>@Html.LabelFor(model => Model.Logins)</dt>
+        <dd>
+            @Model.Logins.Count [
+            @Html.ActionLink("Manage", "ManageLogins") ]
+        </dd>
+        <dt>@Html.LabelFor(model => Model.UserName)</dt>
+        <dd>
+            @Html.DisplayTextFor(model => model.UserName)
+        </dd>
+        <dt>@Html.LabelFor(model => Model.DisplayName)</dt>
+        <dd>
+            @Html.DisplayTextFor(model => model.DisplayName)
+        </dd>
+        <dt>@Html.LabelFor(model => Model.Email)</dt>
+        <dd>
+            @Html.DisplayTextFor(model => model.Email)
+        </dd>
+        <dt>@Html.LabelFor(model => Model.PictureUrl)</dt>
+        <dd>
+            <img src="~/Upload/ProfilePictures/@Model.PictureUrl" class="img-circle"/>
+        </dd>
+
+    </dl>
+</div>

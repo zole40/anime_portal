@@ -1,0 +1,48 @@
+﻿@model Anime_Portal.Models.EditProfileViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div class="form-box" id="login-box">
+    <div class="header">Edit Profile</div>
+
+    @using (Html.BeginForm("Edit", "Manage", new { Name = Model.UserName }, FormMethod.Post, new { role = "form", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="body bg-gray">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" , @readonly = true})
+                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                </div>
+
+
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    @Html.TextBoxFor(m => m.DisplayName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.DisplayName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+            </div>
+
+            @Html.TextBoxFor(m => m.Picture, new { type = "file", @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Picture, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="footer">
+            <button type="submit" class="btn bg-olive btn-block" value="Save">Save</button>
+        </div>
+    }
+</div>
+
+
